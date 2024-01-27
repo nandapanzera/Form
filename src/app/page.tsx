@@ -1,7 +1,9 @@
+import { Main } from '@/components/templates/Main'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Template NextJS + Tailwind
+    <main className="flex min-h-screen">
+      <Main />
     </main>
   )
 }
