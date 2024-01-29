@@ -4,6 +4,7 @@ import { Button } from '@/components/atoms/Button'
 import Input from '@/components/atoms/Input'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
+import { motion } from 'framer-motion'
 
 export function Form() {
   const {
@@ -127,11 +128,18 @@ export function Form() {
           )}
         />
       </div>
-      <div className="flex w-64 lg:w-96">
+      <motion.div
+        animate={{
+          scale: [1],
+        }}
+        transition={{ ease: 'easeOut', duration: 0.5 }}
+        whileTap={{ scale: 0.9 }}
+        className="flex w-64 lg:w-96"
+      >
         <Button type="submit" color="green">
           <div className="font-medium text-zinc-50">CLAIM YOUR FREE TRIAL</div>
         </Button>
-      </div>
+      </motion.div>
 
       <span className="w-fit max-w-60 flex-wrap text-center text-xs text-zinc-500 lg:max-w-96">
         By clicking the button, you are agreeing to our{' '}
